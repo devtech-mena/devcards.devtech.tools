@@ -4,3 +4,11 @@ body {
     background-color: $lightgray;
 }
 
+.container {
+    display: block;
+    .item {
+        width: 100px;
+        text-align: center;
+        margin: auto;
+    }
+}
