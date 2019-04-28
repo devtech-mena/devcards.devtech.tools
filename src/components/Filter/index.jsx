@@ -6,7 +6,7 @@ class Filter extends React.Component {
         const skills = ['android', 'ios'];
         // const skills = this.props.data.site.siteMetadata.skills;
         skills.forEach(skill => {
-            items.push(<li uk-filter-control={"." + skill}><a href="#">{skill}</a></li>)
+            items.push(<li uk-filter-control={"." + skill} key={"filter-" + skill}><a href="#">{skill}</a></li>)
         });
         return (
             <ul className="uk-subnav uk-subnav-pill">
