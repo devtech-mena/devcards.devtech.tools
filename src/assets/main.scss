@@ -1,14 +1,17 @@
 @import 'colors';
 
-body {
-    background-color: $lightgray;
-}
+// body {
+//     background-color: $lightgray;
+// }
 
-.container {
-    display: block;
-    .item {
-        width: 100px;
-        text-align: center;
-        margin: auto;
-    }
-}
+// .container {
+//     display: block;
+//     .item {
+//         width: 1000px;
+//         margin: auto;
+//     }
+// }
+
+@import 'node_modules/uikit/src/scss/variables-theme.scss';
+@import 'node_modules/uikit/src/scss/mixins-theme.scss';
+@import 'node_modules/uikit/src/scss/uikit-theme.scss';

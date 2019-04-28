@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Filter from '../components/Filter';
-import Card from '../components/Card';
+import CardList from '../components/CardList';
 import '../assets/main.scss';
 
 class IndexWrapper extends Component {
@@ -17,8 +17,10 @@ class IndexWrapper extends Component {
     render() {
         return (
             <div dir="rtl">
-                <Filter></Filter>
-                <Card></Card>
+                <div uk-filter="target: .js-filter">
+                    <Filter></Filter>
+                    <CardList></CardList>
+                </div>
             </div>
         );
     }
