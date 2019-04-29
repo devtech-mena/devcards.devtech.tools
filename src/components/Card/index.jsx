@@ -9,7 +9,7 @@ class Card extends React.Component {
             );
         });
         return (
-            <div className="uk-card uk-card-default uk-grid-collapse uk-width-1-2@l uk-margin" uk-grid="">
+            <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="">
                 <div className="uk-card-media-left uk-cover-container uk-width-1-4@m">
                     <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover="" />
                     <canvas width="600" height="400"></canvas>

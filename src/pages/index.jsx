@@ -16,14 +16,10 @@ class IndexWrapper extends Component {
 
     render() {
         return (
-            <div dir="rtl">
-                <div uk-filter="target: .js-filter">
-                    <div className="uk-position-large uk-position-top-center">
-                        <div className="uk-position-top-center">
-                            <Filter></Filter>
-                        </div>
-                        <CardList></CardList>
-                    </div>
+            <div className="uk-position-large">
+                <div uk-filter="target: .js-filter" className="uk-width-xxlarge@l uk-margin-auto-left uk-margin-auto-right">
+                    <Filter></Filter>
+                    <CardList></CardList>
                 </div>
             </div>
         );

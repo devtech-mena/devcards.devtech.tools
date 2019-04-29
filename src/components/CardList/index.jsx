@@ -32,16 +32,16 @@ class CardList extends React.Component {
         ];
         users.forEach(user => {
             items.push(
-                <div key={user.name} className={user.skills.join(" ")}>
+                <li key={user.name} className={user.skills.join(" ") + " uk-width-1-1 uk-margin-small-bottom"}>
                         <Card user={user}></Card>
-                </div>
+                </li>
             );
         });
 
         return (
-            <div className="js-filter uk-margin-xlarge-top">
+            <ul className="js-filter uk-margin-top" uk-grid="">
                 {items}
-            </div>
+            </ul>
         )
     }
 }
