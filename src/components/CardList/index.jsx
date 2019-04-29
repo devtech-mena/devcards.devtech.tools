@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from '../Card';
 
 class CardList extends React.Component {
     render() {
@@ -30,21 +31,9 @@ class CardList extends React.Component {
             },
         ];
         users.forEach(user => {
-            const userSkills = [];
-            user.skills.forEach(skill => {
-                userSkills.push(
-                    <span key={user.name + skill} className="uk-label">{skill}</span>
-                );
-            });
             items.push(
                 <div key={user.name} className={user.skills.join(" ")}>
-                    <div className="uk-card uk-card-default uk-card-body uk-width-xxlarge uk-margin">
-                        <span className="uk-card-badge">
-                            {userSkills}
-                        </span>
-                        <h3 className="uk-card-title">{user.name}</h3>
-                        <p>User {user.name} has skills {user.skills}</p>
-                    </div>
+                        <Card user={user}></Card>
                 </div>
             );
         });
