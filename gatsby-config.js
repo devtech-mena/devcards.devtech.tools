@@ -2,5 +2,15 @@ module.exports = {
     siteMetadata: {
         title: "Syrian Developers",
     },
-    plugins: [`gatsby-plugin-sass`],
+    plugins: [
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                path: `${__dirname}/src/devs`,
+                name: 'devs',
+            },
+        },
+        "gatsby-transformer-remark",
+        "gatsby-plugin-sass",
+    ],
 };

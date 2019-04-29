@@ -23,7 +23,7 @@ class IndexWrapper extends React.Component {
                 </Helmet>
                 <div uk-filter="target: .js-filter" className="uk-width-xxlarge@l uk-margin-auto-left uk-margin-auto-right">
                     <Filter></Filter>
-                    <CardList></CardList>
+                    <CardList users={this.props.data.allMarkdownRemark.edges}></CardList>
                 </div>
             </div>
         );
@@ -37,6 +37,20 @@ export const query = graphql`
         site {
             siteMetadata {
                 title
+            }
+        }
+        allMarkdownRemark {
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        name
+                        skills
+                    }
+                    internal {
+                        content
+                    }
+                }
             }
         }
     }

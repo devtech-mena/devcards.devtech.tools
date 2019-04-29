@@ -3,9 +3,9 @@ import React from 'react';
 class Card extends React.Component {
     render() {
         const userSkills = [];
-        this.props.user.skills.forEach(skill => {
+        this.props.user.node.frontmatter.skills.forEach(skill => {
             userSkills.push(
-                <span key={this.props.user.name + skill} className="uk-label">{skill}</span>
+                <span key={this.props.user.node.frontmatter.name + skill} className="uk-label">{skill}</span>
             );
         });
         return (
@@ -18,8 +18,8 @@ class Card extends React.Component {
                     <span className="uk-card-badge">
                         {userSkills}
                     </span>
-                    <h3 className="uk-card-title">{this.props.user.name}</h3>
-                    <p>User {this.props.user.name} has skills {this.props.user.skills}</p>
+                    <h3 className="uk-card-title">{this.props.user.node.frontmatter.name}</h3>
+                    <p>{this.props.user.node.internal.content}</p>
                 </div>
                 <div>
 
