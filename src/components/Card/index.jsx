@@ -14,7 +14,7 @@ class Card extends React.Component {
                     <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover="" />
                     <canvas width="600" height="400"></canvas>
                 </div>
-                <div className="uk-card-body uk-width-3-4@m uk-text-left">
+                <div className="uk-card-body uk-width-3-4@m uk-text-left uk-text-top uk-text-justify">
                     <span className="uk-card-badge">
                         {userSkills}
                     </span>

@@ -39,7 +39,7 @@ class CardList extends React.Component {
         });
 
         return (
-            <div className="js-filter uk-text-center uk-margin-xlarge-top">
+            <div className="js-filter uk-margin-xlarge-top">
                 {items}
             </div>
         )
