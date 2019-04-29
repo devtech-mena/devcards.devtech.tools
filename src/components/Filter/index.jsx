@@ -3,15 +3,17 @@ import React from 'react';
 class Filter extends React.Component {
     render() {
         const items = [];
-        const skills = ['android', 'ios', 'web'];
+        const skills = ['android', 'ios', 'web', 'javascript', 'devops', 'other'];
         // const skills = this.props.data.site.siteMetadata.skills;
         skills.forEach(skill => {
-            items.push(<li uk-filter-control={"." + skill} key={"filter-" + skill}><a href="/#">{skill}</a></li>)
+            items.push(<li className="uk-width-1-4" uk-filter-control={"." + skill} key={"filter-" + skill}><a className="uk-text-center" href="/#">{skill}</a></li>)
         });
         return (
-            <ul className="uk-subnav uk-subnav-pill" uk-sticky="show-on-up: true">
-                {items}
-            </ul>
+            <div className="uk-background-default" style={{ zIndex: 980 }} uk-sticky="show-on-up: true">
+                <div className="uk-subnav uk-subnav-pill">
+                    {items}
+                </div>
+            </div>
         );
     }
 }
