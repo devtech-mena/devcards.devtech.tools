@@ -3,8 +3,7 @@ import React from 'react';
 class Filter extends React.Component {
     render() {
         const items = [];
-        const skills = ['android', 'ios', 'web', 'javascript', 'devops', 'other'];
-        // const skills = this.props.data.site.siteMetadata.skills;
+        const skills = this.props.skills;
         skills.forEach(skill => {
             items.push(<li className="uk-width-1-4" uk-filter-control={"." + skill} key={"filter-" + skill}><a className="uk-text-center" href="/#">{skill}</a></li>)
         });

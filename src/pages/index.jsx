@@ -22,7 +22,7 @@ class IndexWrapper extends React.Component {
                     <title>{this.props.data.site.siteMetadata.title}</title>
                 </Helmet>
                 <div uk-filter="target: .js-filter" className="uk-width-xxlarge@l uk-margin-auto-left uk-margin-auto-right">
-                    <Filter></Filter>
+                    <Filter skills={this.props.data.site.siteMetadata.skills}></Filter>
                     <CardList users={this.props.data.allMarkdownRemark.edges}></CardList>
                 </div>
             </div>
@@ -37,6 +37,7 @@ export const query = graphql`
         site {
             siteMetadata {
                 title
+                skills
             }
         }
         allMarkdownRemark {
