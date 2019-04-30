@@ -5,9 +5,16 @@ class Card extends React.Component {
         const userSkills = [];
         this.props.user.node.frontmatter.skills.forEach(skill => {
             userSkills.push(
-                <span key={this.props.user.node.frontmatter.name + skill} className="uk-label">{skill}</span>
+                <span key={this.props.user.node.frontmatter.name + skill} className="uk-label uk-margin-right">{skill}</span>
             );
         });
+        const userProfiles = [];
+        const profiles = this.props.user.node.frontmatter.profiles;
+        for (let profile in profiles) {
+            userProfiles.push(
+                <li><a href="#"><span uk-icon={profile} className="uk-margin-right"></span> {profiles[profile]}</a></li>
+            );
+        }
         return (
             <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="">
                 <div className="uk-card-media-left uk-cover-container uk-width-1-4@m">
@@ -15,10 +22,18 @@ class Card extends React.Component {
                     <canvas width="600" height="400"></canvas>
                 </div>
                 <div className="uk-card-body uk-width-3-4@m uk-text-left uk-text-top uk-text-justify">
-                    <span className="uk-card-badge">
-                        {userSkills}
-                    </span>
-                    <h3 className="uk-card-title">{this.props.user.node.frontmatter.name}</h3>
+                    <div className="uk-card-badge">
+                        <button className="uk-button uk-button-default" type="button">Contact</button>
+                        <div uk-dropdown="">
+                            <ul className="uk-nav uk-dropdown-nav">
+                                {userProfiles}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="uk-card-title">
+                        <h3>{this.props.user.node.frontmatter.name}</h3>
+                        <span>{userSkills}</span>
+                    </div>
                     <p>{this.props.user.node.internal.content}</p>
                 </div>
                 <div>

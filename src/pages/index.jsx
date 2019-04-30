@@ -50,6 +50,15 @@ export const query = graphql`
                         photo {
                             publicURL
                         }
+                        profiles {
+                            github
+                            gitlab
+                            codepen
+                            stackoverflow
+                            email
+                            website
+                            phonenumber
+                        }
                     }
                     internal {
                         content
