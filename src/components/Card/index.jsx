@@ -11,7 +11,7 @@ class Card extends React.Component {
         return (
             <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="">
                 <div className="uk-card-media-left uk-cover-container uk-width-1-4@m">
-                    <img src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover="" />
+                    <img src={this.props.user.node.frontmatter.photo.publicURL} alt="" uk-cover="" />
                     <canvas width="600" height="400"></canvas>
                 </div>
                 <div className="uk-card-body uk-width-3-4@m uk-text-left uk-text-top uk-text-justify">

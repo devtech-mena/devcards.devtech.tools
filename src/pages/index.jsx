@@ -47,6 +47,9 @@ export const query = graphql`
                     frontmatter {
                         name
                         skills
+                        photo {
+                            publicURL
+                        }
                     }
                     internal {
                         content
