@@ -4,11 +4,11 @@ import Card from '../Card';
 class CardList extends React.Component {
     render() {
         const items = [];
-        const users = this.props.users || [];
-        users.forEach(user => {
+        const devs = this.props.devs || [];
+        devs.forEach(dev => {
             items.push(
-                <li key={user.node.id} className={user.node.frontmatter.skills.join(" ") + " uk-width-1-1 uk-margin-small-bottom"}>
-                    <Card user={user}></Card>
+                <li key={dev.id} className={dev.skills.join(" ") + " uk-width-1-1 uk-margin-small-bottom"}>
+                    <Card dev={dev}></Card>
                 </li>
             );
         });
