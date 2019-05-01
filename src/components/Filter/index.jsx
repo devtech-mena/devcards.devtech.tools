@@ -5,7 +5,7 @@ class Filter extends React.Component {
         const items = [];
         const skills = this.props.skills;
         skills.forEach(skill => {
-            items.push(<li className="uk-width-1-4" uk-filter-control={"." + skill} key={"filter-" + skill}><a className="uk-text-center" href="/#">{skill}</a></li>)
+            items.push(<li className="uk-width-1-3 uk-width-1-4@s" uk-filter-control={"." + skill} key={"filter-" + skill}><a className="uk-text-center" href="/#">{skill}</a></li>)
         });
         return (
             <div className="uk-background-default" style={{ zIndex: 980 }} uk-sticky="show-on-up: true">
