@@ -5,7 +5,6 @@ import { graphql } from 'gatsby';
 class CardList extends React.Component {
     render() {
         const items = [];
-        console.log(this.props);
         const users = this.props.users || [];
         users.forEach(user => {
             items.push(
