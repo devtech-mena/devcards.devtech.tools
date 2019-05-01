@@ -5,6 +5,7 @@ import gitlab from './gitlab.svg';
 import stackoverflow from './stackoverflow.svg';
 import website from './website.svg';
 import phonenumber from './phonenumber.svg';
+import info from './info.svg';
 export default {
     codepen,
     email,
@@ -12,5 +13,6 @@ export default {
     gitlab,
     stackoverflow,
     website,
-    phonenumber
+    phonenumber,
+    info,
 }
