@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../Icon';
+import './style.scss'
 
 class Card extends React.Component {
     render() {
@@ -28,7 +29,7 @@ class Card extends React.Component {
                 </div>
                 <div className="uk-card-body uk-width-3-4@m uk-text-left uk-text-top uk-text-justify">
                     <div className="uk-card-badge">
-                        <button className="uk-button uk-button-default" type="button">Contact</button>
+                        <span className="uk-text-primary"><Icon icon="info" className="info-badge" /></span>
                         <div uk-dropdown="bottom-right">
                             <ul className="uk-nav uk-dropdown-nav">
                                 {userProfiles}

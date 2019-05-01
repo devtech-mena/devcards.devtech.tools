@@ -6,7 +6,7 @@ class Icon extends React.Component {
     render() {
         const icon = ICONS[this.props.icon];
         return (
-            <span className="icon">{new icon(icon.defaultProps)}</span>
+            <span className={"icon " + this.props.className}>{new icon(icon.defaultProps)}</span>
         )
     }
 }
