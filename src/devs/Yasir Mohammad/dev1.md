@@ -1,6 +1,6 @@
 ---
 name: "Yasir Mohammad"
-photo: "photo.png"
+photo: "photo.jpeg"
 skills: ["web", "ios"]
 profiles: {
     github: 'yasirmohammad',
