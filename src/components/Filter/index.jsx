@@ -8,11 +8,14 @@ class Filter extends React.Component {
             items.push(<li className="uk-width-1-3 uk-width-1-4@s" uk-filter-control={"." + skill} key={"filter-" + skill}><a className="uk-text-center" href="/#">{skill}</a></li>)
         });
         return (
-            <div className="uk-background-default" style={{ zIndex: 980 }} uk-sticky="show-on-up: true">
-                <div className="uk-subnav uk-subnav-pill">
-                    {items}
+            <>
+                <h3 className="uk-text-muted uk-text-center">You're Searching for ..</h3>
+                <div className="uk-background-default" style={{ zIndex: 980 }} uk-sticky="show-on-up: true">
+                    <div className="uk-subnav uk-subnav-pill">
+                        {items}
+                    </div>
                 </div>
-            </div>
+            </>
         );
     }
 }
