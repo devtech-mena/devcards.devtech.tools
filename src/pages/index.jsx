@@ -34,6 +34,10 @@ class IndexWrapper extends React.Component {
         return (
             <div className="uk-position-large">
                 <Helmet>
+                    <meta property="og:title" content="Syrian Developers" />
+                    <meta property="og:image" content="https://syriandevs.devtech.tools/devtech-logo.png" />
+                    <meta property="og:description" content="A curated list of Syrian developers." />
+                    <meta property="og:url" content="https://syriandevs.devtech.tools" />
                     <title>{siteMetadata.title}</title>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css" />
                 </Helmet>
