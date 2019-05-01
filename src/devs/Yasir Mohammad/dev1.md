@@ -1,7 +1,7 @@
 ---
 name: "Yasir Mohammad"
 photo: "./photo.jpeg"
-skills: ["web", "ios", "android", "nodejs"]
+skills: ["web", "android", "nodejs"]
 profiles: {
     github: "yasirmohammad",        # GitHub username
     gitlab: "",                     # Gitlab username
