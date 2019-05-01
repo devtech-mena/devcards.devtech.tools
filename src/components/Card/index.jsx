@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../Icon';
 
 class Card extends React.Component {
     render() {
@@ -10,10 +11,14 @@ class Card extends React.Component {
         });
         const userProfiles = [];
         const profiles = this.props.user.node.frontmatter.profiles;
-        for (let profile in profiles) {
-            userProfiles.push(
-                <li><a href="#"><span uk-icon={profile} className="uk-margin-right"></span> {profiles[profile]}</a></li>
-            );
+        for (let profileName in profiles) {
+            if (profiles[profileName] && profiles[profileName] !== "") {
+                userProfiles.push(
+                    <li key={profileName + this.props.user.node.frontmatter.name}>
+                        <a href="/#" className="uk-margin-right"><Icon icon={profileName} /> {profiles[profileName]}</a>
+                    </li>
+                );
+            }
         }
         return (
             <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="">
