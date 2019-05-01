@@ -1,7 +1,36 @@
 module.exports = {
     siteMetadata: {
         title: "Syrian Developers",
-        skills: ["ios", "web", "android", "devops"],
+        skills: ["frontend", "python", "nodejs", "php", "ios", "android"],
+        profiles: {
+            github: {
+                profileLink: "https://github.com/",
+                icon: "github"
+            },
+            gitlab: {
+                profileLink: "https://gitlab.com/",
+                icon: "gitlab"
+            },
+            stackoverflow: {
+                profileLink: "https://stackoverflow.com/users/",
+                icon: "stackoverflow"
+            },
+            codepen: {
+                profileLink: "https://codepen.io/",
+                icon: "codepen"
+            },
+            email: {
+                profileLink: "mailto:",
+                icon: "email"
+            },
+            phonenumber: {
+                icon: "phonenumber"
+            },
+            website: {
+                profileLink: "",
+                icon: "website"
+            },
+        }
     },
     plugins: [
         {

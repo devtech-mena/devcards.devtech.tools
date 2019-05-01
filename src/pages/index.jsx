@@ -18,13 +18,14 @@ class IndexWrapper extends React.Component {
 
     render() {
         const siteMetadata = this.props.data.site.siteMetadata;
+        const profilesConfig = this.props.data.site.siteMetadata.profiles;
         const devs = this.props.data.allMarkdownRemark.edges.map(
             (edge) => {
                 return {
                     id: edge.node.id,
                     name: edge.node.frontmatter.name,
                     skills: edge.node.frontmatter.skills,
-                    photoUrl: edge.node.frontmatter.photo ? edge.node.frontmatter.photo.publicURL : null,
+                    photoURL: edge.node.frontmatter.photo ? edge.node.frontmatter.photo.publicURL : null,
                     content: edge.node.internal.content,
                     profiles: edge.node.frontmatter.profiles,
                 };
@@ -37,7 +38,7 @@ class IndexWrapper extends React.Component {
                 </Helmet>
                 <div uk-filter="target: .js-filter" className="uk-width-xxlarge@l uk-margin-auto-left uk-margin-auto-right">
                     <Filter skills={siteMetadata.skills}></Filter>
-                    <CardList devs={devs}></CardList>
+                    <CardList devs={devs} profilesConfig={profilesConfig}></CardList>
                 </div>
             </div>
         );
@@ -52,6 +53,35 @@ export const query = graphql`
             siteMetadata {
                 title
                 skills
+                profiles {
+                    github {
+                        profileLink
+                        icon
+                    }
+                    gitlab {
+                        profileLink
+                        icon
+                    }
+                    stackoverflow {
+                        profileLink
+                        icon
+                    }
+                    codepen {
+                        profileLink
+                        icon
+                    }
+                    email {
+                        profileLink
+                        icon
+                    }
+                    phonenumber {
+                        icon
+                    }
+                    website {
+                        profileLink
+                        icon
+                    }
+                }
             }
         }
         allMarkdownRemark {

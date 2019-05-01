@@ -11,13 +11,20 @@ class Card extends React.Component {
                 <span key={dev.name + skill} className="uk-label uk-margin-right">{skill}</span>
             );
         });
+        const profilesConfig = this.props.profilesConfig;
         const userProfiles = [];
         const profiles = dev.profiles;
+        let profile, profileConfig;
         for (let profileName in profiles) {
-            if (profiles[profileName] && profiles[profileName] !== "") {
+            profile = profiles[profileName];
+            profileConfig = profilesConfig[profileName];
+            if (profile && profile !== "") {
+                console.log(profileConfig)
                 userProfiles.push(
                     <li key={profileName + dev.name}>
-                        <a href="/#" className="uk-margin-right"><Icon icon={profileName} /> {profiles[profileName]}</a>
+                        <a href={profileConfig.profileLink || profileConfig.profileLink === '' ? profileConfig.profileLink + profile : "/#"} className="uk-margin-right">
+                            <Icon icon={profileConfig.icon} /> {profile}
+                        </a>
                     </li>
                 );
             }
@@ -42,7 +49,7 @@ class Card extends React.Component {
                         <span className="uk-align-center uk-margin-small">{userSkills}</span>
                     </div>
                     <blockquote>
-                        <p class="uk-margin-small-bottom">
+                        <p className="uk-margin-small-bottom">
                             {dev.content}
                         </p>
                     </blockquote>

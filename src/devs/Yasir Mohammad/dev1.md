@@ -1,15 +1,16 @@
 ---
 name: "Yasir Mohammad"
-photo: "photo.jpeg"
-skills: ["web", "ios"]
+photo: "./photo.jpeg"
+skills: ["web", "ios", "android", "nodejs"]
 profiles: {
-    github: 'yasirmohammad',
-    gitlab: '',
-    email: 'yasir@devtech.tools',
-    codepen: '',
-    phonenumber: '',
-    website: '',
-    stackoverflow: '',
+    github: "yasirmohammad",        # GitHub username
+    gitlab: "",                     # Gitlab username
+    email: "yasir@devtech.tools",   # email address
+    codepen: "",                    # Codepen username
+    phonenumber: "",                # Phonenumber
+    website: "",                    # Website
+    stackoverflow: "",              # Stackoverflow user id
 }
 ---
-I'm a passionate developer with quite awesome interests in new technologies.
+I built this !
+And It's an AWESOME exposure for Syrian Developers !
