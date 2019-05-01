@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '../Icon';
-import './style.scss'
+import './style.scss';
 
 class Card extends React.Component {
     render() {
@@ -38,12 +38,13 @@ class Card extends React.Component {
                     </div>
                     <div className="uk-card-title">
                         <h3>{this.props.user.node.frontmatter.name}</h3>
-                        <span>{userSkills}</span>
+                        <span className="uk-align-center uk-margin-small">{userSkills}</span>
                     </div>
-                    <p>{this.props.user.node.internal.content}</p>
-                </div>
-                <div>
-
+                    <blockquote>
+                        <p class="uk-margin-small-bottom">
+                            {this.props.user.node.internal.content}
+                        </p>
+                    </blockquote>
                 </div>
             </div>
         );
