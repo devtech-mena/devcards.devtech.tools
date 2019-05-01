@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from '../Card';
-import { graphql } from 'gatsby';
 
 class CardList extends React.Component {
     render() {
