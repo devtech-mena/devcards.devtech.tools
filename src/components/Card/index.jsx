@@ -22,7 +22,7 @@ class Card extends React.Component {
                 console.log(profileConfig)
                 userProfiles.push(
                     <li key={profileName + dev.name}>
-                        <a href={profileConfig.profileLink || profileConfig.profileLink === '' ? profileConfig.profileLink + profile : "/#"} className="uk-margin-right">
+                        <a target="_blank" href={profileConfig.profileLink || profileConfig.profileLink === '' ? profileConfig.profileLink + profile : "/#"} className="uk-margin-right">
                             <Icon icon={profileConfig.icon} /> {profile}
                         </a>
                     </li>
