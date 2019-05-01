@@ -35,8 +35,11 @@ class IndexWrapper extends React.Component {
             <div className="uk-position-large">
                 <Helmet>
                     <title>{siteMetadata.title}</title>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css" />
                 </Helmet>
+                <a className="github-fork-ribbon" href="http://url.to-your.repo" data-ribbon="array.push( yourProfile )" title="Add Yourself on Github">Add Yourself on Github</a>
                 <div uk-filter="target: .js-filter" className="uk-width-xxlarge@l uk-margin-auto-left uk-margin-auto-right">
+                    <h1 className="uk-text-primary uk-text-center">Syrian Developers List</h1>
                     <Filter skills={siteMetadata.skills}></Filter>
                     <CardList devs={devs} profilesConfig={profilesConfig}></CardList>
                 </div>

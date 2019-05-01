@@ -15,3 +15,8 @@
 @import 'node_modules/uikit/src/scss/variables-theme.scss';
 @import 'node_modules/uikit/src/scss/mixins-theme.scss';
 @import 'node_modules/uikit/src/scss/uikit-theme.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css');
+
+.github-fork-ribbon:before {
+    background-color: #1d87f0 !important;
+}
