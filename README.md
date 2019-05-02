@@ -1,5 +1,5 @@
 <h1 align="center">
-  Syrian Developers List
+  <a href="https://syriandevs.devtech.tools">Syrian Developers List</a>
 </h1>
 
 A curated list of Syrian developers to help them get a nice exposure.
@@ -7,7 +7,7 @@ A curated list of Syrian developers to help them get a nice exposure.
 
 ## Why we made this?
 
-We at DevTech believe in skills Syrian Developers have, but due to limited or unprofessional market, most of these skills are not fully recognized or discovered, or even never invested. This site is our first step in our mission to empower fellow syrian devs.
+Cuz it's cool :D
 
 
 ## I want to add my name !
