@@ -41,7 +41,7 @@ class IndexWrapper extends React.Component {
                     <title>{siteMetadata.title}</title>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css" />
                 </Helmet>
-                <a className="github-fork-ribbon" href="http://url.to-your.repo" data-ribbon="array.push( yourProfile )" title="Add Yourself on Github">Add Yourself on Github</a>
+                <a className="github-fork-ribbon" href="https://github.com/devtech-mena/syriandevs.devtech.tools" data-ribbon="Add Your Profile" title="Add Your Profile">Add Your Profile</a>
                 <div uk-filter="target: .js-filter" className="uk-width-xxlarge@l uk-margin-auto-left uk-margin-auto-right">
                     <h1 className="uk-text-primary uk-text-center">Syrian Developers List</h1>
                     <Filter skills={siteMetadata.skills}></Filter>
