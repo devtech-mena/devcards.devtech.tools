@@ -28,8 +28,11 @@ class Card extends React.Component {
     }
 
     handleClick(e) {
-        e.preventDefault();
-        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+        if (!(e.target.tagName === "A" || e.target.tagName === "PATH" || e.target.tagName === "svg" || e.target.tagName === "polyline")) {
+            console.log(e.target.tagName)
+            e.preventDefault();
+            this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+        }
     }
 
     render() {
@@ -57,10 +60,21 @@ class Card extends React.Component {
                 );
             }
         }
+        const userProjects = []
+        dev.projects.forEach((project) => {
+            userProjects.push(
+                <li key={dev.name + project.name} className="uk-height-1-1">
+                    <img src={project.photoURL} alt="" uk-cover="" />
+                    <div className="uk-padding-small-vertical uk-overlay uk-position-relative uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 className="uk-margin-remove">{project.name}</h3>
+                    </div>
+                </li>
+            );
+        });
         return (
-            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection={this.state.isWide? 'vertical' : 'horizontal'}>
-                <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="" key="front">
-                    <div className="uk-card-media-left uk-cover-container uk-width-1-4@m" onClick={this.handleClick}>
+            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection={this.state.isWide ? 'vertical' : 'horizontal'}>
+                <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="" key="front" onClick={this.handleClick}>
+                    <div className="uk-card-media-left uk-cover-container uk-width-1-4@m">
                         <img src={dev.photoURL} alt="" uk-cover="" />
                         <canvas width="600" height="400"></canvas>
                     </div>
@@ -73,7 +87,7 @@ class Card extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        <div onClick={this.handleClick}>
+                        <div>
                             <div className="uk-card-title">
                                 <h3>{dev.name}</h3>
                                 <span className="uk-align-center uk-margin-small">{userSkills}</span>
@@ -86,23 +100,13 @@ class Card extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="" key="back" onClick={this.handleClick}>
-                    <div className="uk-card-media-left uk-cover-container uk-width-1-4@m">
-                        <img src={dev.photoURL} alt="" uk-cover="" />
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div className="uk-card-body uk-width-3-4@m uk-text-left uk-text-top uk-text-justify">
-                        <div>
-                            <div className="uk-card-title">
-                                <h3>THis is back</h3>
-                            </div>
-                            <blockquote>
-                                <p className="uk-margin-small-bottom">
-                                    {dev.content}
-                                </p>
-                            </blockquote>
-                        </div>
-                    </div>
+
+                <div className="uk-card-body uk-visible-toggle uk-card uk-card-default uk-light" key="back" onClick={this.handleClick} tabIndex="-1" uk-slideshow="animation: slide">
+                    <ul className="uk-slideshow-items">
+                        {userProjects}
+                    </ul>
+                    <a className="uk-position-top-left uk-position-medium uk-hidden-hover" href="#" uk-slidenav-previous="" uk-slideshow-item="previous"></a>
+                    <a className="uk-position-top-right uk-position-medium uk-hidden-hover" href="#" uk-slidenav-next="" uk-slideshow-item="next"></a>
                 </div>
             </ReactCardFlip>
         );

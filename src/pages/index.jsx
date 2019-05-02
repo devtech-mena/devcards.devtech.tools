@@ -21,6 +21,9 @@ class IndexWrapper extends React.Component {
         const profilesConfig = this.props.data.site.siteMetadata.profiles;
         const devs = this.props.data.allMarkdownRemark.edges.map(
             (edge) => {
+                let projects = edge.node.frontmatter.projects.map(project => {
+                    return { name: project.name, photoURL: project.photo.publicURL };
+                });
                 return {
                     id: edge.node.id,
                     name: edge.node.frontmatter.name,
@@ -28,6 +31,7 @@ class IndexWrapper extends React.Component {
                     photoURL: edge.node.frontmatter.photo ? edge.node.frontmatter.photo.publicURL : null,
                     content: edge.node.internal.content,
                     profiles: edge.node.frontmatter.profiles,
+                    projects: projects,
                 };
             }
         );
@@ -110,6 +114,12 @@ export const query = graphql`
                             website
                             phonenumber
                         }
+                        projects {
+                      	  name
+                        	photo {
+                        	  publicURL
+                        	}
+                      	}
                     }
                     internal {
                         content
