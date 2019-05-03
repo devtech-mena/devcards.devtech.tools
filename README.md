@@ -39,7 +39,7 @@ You may modify on the code in `src` directory, or change `gatsby-config.js` to a
 
 Because we're developers, working with git is one of the main and most eesntial skills every software engineer should know how to use. If you're not familiar with it, let this be an excercise, and we will help you to get things done.
 
-If you need any help, don't hesitate to talk to us on [Gitter](https://gitter.im/DevCards/community).
+If you need any help, don't hesitate to talk to us on [Gitter](https://gitter.im/DevTechMena/DevCards).
 
 
 ## Have issue ?
