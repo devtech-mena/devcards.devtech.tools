@@ -47,7 +47,7 @@ class IndexWrapper extends React.Component {
                 </Helmet>
                 <a className="github-fork-ribbon" href="https://github.com/devtech-mena/syriandevs.devtech.tools" data-ribbon="Add Your Profile" title="Add Your Profile">Add Your Profile</a>
                 <div uk-filter="target: .js-filter" className="uk-width-xxlarge@l uk-margin-auto-left uk-margin-auto-right">
-                    <h1 className="uk-text-primary uk-text-center"><img src="/logo.svg" /></h1>
+                    <h1 className="uk-text-primary uk-text-center"><img alt="Syrian Developers List" src="/logo.svg" /></h1>
                     <Filter skills={siteMetadata.skills}></Filter>
                     <CardList devs={devs} profilesConfig={profilesConfig}></CardList>
                 </div>
@@ -115,10 +115,10 @@ export const query = graphql`
                             phonenumber
                         }
                         projects {
-                      	  name
-                        	photo {
-                        	  publicURL
-                        	}
+                            name
+                            photo {
+                                publicURL
+                            }
                       	}
                     }
                     internal {
