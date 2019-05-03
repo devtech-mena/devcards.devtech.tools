@@ -29,7 +29,6 @@ class Card extends React.Component {
 
     handleClick(e) {
         if (!(e.target.tagName === "A" || e.target.tagName === "PATH" || e.target.tagName === "svg" || e.target.tagName === "polyline")) {
-            console.log(e.target.tagName)
             e.preventDefault();
             this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
         }
