@@ -16,19 +16,14 @@ tl;dr: Fork, add folder simple markdown and your photo in `devs`, create a pull 
 
 If you're not familiar with Github, don't warry, adding your name is quite simple:
 
-1- Fork this repo.
+1. Fork this repo.
+2. Clone the fork to your PC.
+3. Add a new folder with your name in `devs` folder and place your photo in it.
+4. Create a new markdown file containing your info.
+5. Commit your changes and push to your repo.
+6. Create a pull request.
 
-2- Clone the fork to your PC.
-
-3- Add a new folder with your name in `devs` folder and place your photo in it.
-
-4- Create a new markdown file containing your info.
-
-5- Commit your changes and push to your repo.
-
-6- Create a pull request.
-
-You can look at `devs/Yasir Mohammad` as an example. and 
+Take a look at `devs/Yasir Mohammad` as an example. You may add any skills you want to highlight in `skills` array, and the projects you want to show in the `projects` array.
 
 
 ## How to contribute ?
