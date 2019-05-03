@@ -8272,10 +8272,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-card-flip@^0.7.0:
+"react-card-flip@https://github.com/ammarlakis/react-card-flip":
   version "0.7.0"
-  resolved "https://registry.yarnpkg.com/react-card-flip/-/react-card-flip-0.7.0.tgz#edf72256ad37787d8829bad6e683f96916b1efab"
-  integrity sha512-1Zi/2KfbkQg5rJHGHDqA6lOuHXCnQ+S4CGzL5cAT+JGBO0a7SSrPYXPI/u+z7o1Lpbbx7by2hBrZytbORCv+Lg==
+  resolved "https://github.com/ammarlakis/react-card-flip#702a1f41bc1ff5e946f43534f36fe225a278bb29"
   dependencies:
     classnames "^2.2.0"
     prop-types "^15.6.0"
