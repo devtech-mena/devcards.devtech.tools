@@ -14,23 +14,7 @@ profiles: {
 projects : [
     {
         name: "Syrian Developers1",
-        photo: "./SyrianDevs.png",
-    },
-    {
-        name: "Syrian Developers2",
-        photo: "./SyrianDevs.png",
-    },
-    {
-        name: "Syrian Developers3",
-        photo: "./SyrianDevs.png",
-    },
-    {
-        name: "Syrian Developers4",
-        photo: "./SyrianDevs.png",
-    },
-    {
-        name: "Syrian Developers5",
-        photo: "./SyrianDevs.png",
+        photo: "./syriandevelopers.png",
     },
 ]
 ---
