@@ -10,7 +10,7 @@ class Filter extends React.Component {
         return (
             <>
                 <h3 className="uk-text-muted uk-text-center">You're Searching for ..</h3>
-                <div className="uk-background-default" style={{ zIndex: 980 }} uk-sticky="show-on-up: true">
+                <div className="uk-background-default uk-box-shadow-small" style={{ zIndex: 980 }} uk-sticky="show-on-up: true">
                     <div className="uk-subnav uk-subnav-pill">
                         {items}
                     </div>
