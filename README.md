@@ -1,13 +1,13 @@
 <h1 align="center">
-  <a href="https://syriandevs.devtech.tools">Syrian Developers List</a>
+  <a href="https://devcards.devtech.tools">Dev Cards</a>
 </h1>
 
-A curated list of Syrian developers to help them get a nice exposure.
+A curated list of developers CVs as cards to help them get a nice exposure.
 
 
 ## Why we made this?
 
-We focus on empowering Syrian developers by supporting the community with appropriate and cutting edge tools. This projects aims to help Syrian fellow devs get recognized and discovered by companies and clients that seek a specific set of skills.
+We focus on empowering developers (specifically Syrians) by supporting the community with appropriate and cutting edge tools. This projects aims to help fellow devs get recognized and discovered by companies and clients that seek a specific set of skills.
 
 
 ## I want to add my name !
@@ -39,7 +39,7 @@ You may modify on the code in `src` directory, or change `gatsby-config.js` to a
 
 Because we're developers, working with git is one of the main and most eesntial skills every software engineer should know how to use. If you're not familiar with it, let this be an excercise, and we will help you to get things done.
 
-If you need any help, don't hesitate to talk to us on [Gitter](https://gitter.im/SyrianDevelopers/community).
+If you need any help, don't hesitate to talk to us on [Gitter](https://gitter.im/DevCards/community).
 
 
 ## Have issue ?

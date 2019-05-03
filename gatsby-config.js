@@ -1,7 +1,10 @@
 module.exports = {
     siteMetadata: {
-        title: "Syrian Developers",
-        skills: ["frontend", "python", "nodejs", "php", "ios", "android"],
+        title: "Dev Cards",
+        description: "Neat Developers CV",
+        repoUrl: "https://github.com/devtech-mena/devcards.devtech.tools",
+        homeUrl: "https://devcards.devtech.tools",
+        skills: ["angular", "react", "nodejs", "python", "php", "ios", "android"],
         profiles: {
             github: {
                 profileLink: "https://github.com/",

@@ -13,10 +13,10 @@ profiles: {
 }
 projects : [
     {
-        name: "Syrian Developers1",
-        photo: "./syriandevelopers.png",
+        name: "Dev Cards",
+        photo: "./devcards.png",
     },
 ]
 ---
 I built this !
-And It's an AWESOME exposure for Syrian Developers !
+And It's an AWESOME exposure for Developers !
