@@ -65,7 +65,7 @@ class Card extends React.Component {
             userProjects.push(
                 <li key={dev.name + project.name} className="uk-height-1-1">
                     <img src={project.photoURL} alt="" uk-cover="" />
-                    <div className="uk-padding-small-vertical uk-overlay uk-position-relative uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <div className="uk-padding-remove-vertical uk-overlay uk-overlay-primary uk-position-top uk-text-center uk-transition-slide-top">
                         <h3 className="uk-margin-remove">{project.name}</h3>
                     </div>
                 </li>
@@ -100,13 +100,12 @@ class Card extends React.Component {
                         </div>
                     </div>
                 </div>
-
-                <div className="uk-card-body uk-visible-toggle uk-card uk-card-default uk-light" key="back" onClick={this.handleClick} tabIndex="-1" uk-slideshow="animation: slide">
+                <div className="uk-card-body uk-visible-toggle uk-card uk-card-default uk-light uk-padding-remove" key="back" onClick={this.handleClick} tabIndex="-1" uk-slideshow="animation: slide">
                     <ul className="uk-slideshow-items">
                         {userProjects}
                     </ul>
-                    <a className="uk-position-top-left uk-position-medium uk-hidden-hover" href="#" uk-slidenav-previous="" uk-slideshow-item="previous"></a>
-                    <a className="uk-position-top-right uk-position-medium uk-hidden-hover" href="#" uk-slidenav-next="" uk-slideshow-item="next"></a>
+                    <a className="uk-position-top-left uk-position-small uk-margin-remove-top" href="/#" uk-slidenav-previous="" uk-slideshow-item="previous"></a>
+                    <a className="uk-position-top-right uk-position-small uk-margin-remove-top" href="/#" uk-slidenav-next="" uk-slideshow-item="next"></a>
                 </div>
             </ReactCardFlip>
         );
