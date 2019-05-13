@@ -12,6 +12,21 @@
 //     }
 // }
 
+$height-small-height:                            150px !default;
+$height-medium-height:                           300px !default;
+$height-large-height:                            450px !default;
+$height-xlarge-height:                            600px !default;
+$height-xxlarge-height:                            750px !default;
+$breakpoint-small: 640px !default;
+$breakpoint-medium: 960px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-xlarge: 1600px !default;
+$breakpoint-xsmall-max: ($breakpoint-small - 1) !default;
+$breakpoint-small-max: ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max: ($breakpoint-large - 1) !default;
+$breakpoint-large-max: ($breakpoint-xlarge - 1) !default;
+
+
 @import 'node_modules/uikit/src/scss/variables-theme.scss';
 @import 'node_modules/uikit/src/scss/mixins-theme.scss';
 @import 'node_modules/uikit/src/scss/uikit-theme.scss';
@@ -19,4 +34,84 @@
 
 .github-fork-ribbon:before {
     background-color: #1d87f0 !important;
+}
+
+
+.uk-height-small { height: $height-small-height; }
+.uk-height-medium { height: $height-medium-height; }
+.uk-height-large { height: $height-large-height; }
+.uk-height-xlarge { height: $height-xlarge-height; }
+.uk-height-xxlarge { height: $height-xxlarge-height; }
+
+
+@media (min-width: $breakpoint-small) {
+    .uk-height-small\@s {
+        height: $height-small-height;
+    }
+    .uk-height-medium\@s {
+        height: $height-medium-height;
+    }
+    .uk-height-large\@s {
+        height: $height-large-height;
+    }
+    .uk-height-xlarge\@s {
+        height: $height-xlarge-height;
+    }
+    .uk-height-xxlarge\@s {
+        height: $height-xxlarge-height;
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .uk-height-small\@m {
+        height: $height-small-height;
+    }
+    .uk-height-medium\@m {
+        height: $height-medium-height;
+    }
+    .uk-height-large\@m {
+        height: $height-large-height;
+    }
+    .uk-height-xlarge\@m {
+        height: $height-xlarge-height;
+    }
+    .uk-height-xxlarge\@m {
+        height: $height-xxlarge-height;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .uk-height-small\@l {
+        height: $height-small-height;
+    }
+    .uk-height-medium\@l {
+        height: $height-medium-height;
+    }
+    .uk-height-large\@l {
+        height: $height-large-height;
+    }
+    .uk-height-xlarge\@l {
+        height: $height-xlarge-height;
+    }
+    .uk-height-xxlarge\@l {
+        height: $height-xxlarge-height;
+    }
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    .uk-height-small\@xl {
+        height: $height-small-height;
+    }
+    .uk-height-medium\@xl {
+        height: $height-medium-height;
+    }
+    .uk-height-large\@xl {
+        height: $height-large-height;
+    }
+    .uk-height-xlarge\@xl {
+        height: $height-xlarge-height;
+    }
+    .uk-height-xxlarge\@xl {
+        height: $height-xxlarge-height;
+    }
 }

@@ -10,7 +10,7 @@ class Card extends React.Component {
             isFlipped: false,
             isWide: false,
         };
-        this.handleClick = this.handleClick.bind(this);
+        this.flipCard = this.flipCard.bind(this);
         this.updatePredicate = this.updatePredicate.bind(this);
     }
 
@@ -24,10 +24,10 @@ class Card extends React.Component {
     }
 
     updatePredicate() {
-        this.setState({ isWide: window.innerWidth > 960 });
+        this.setState({ isWide: window.innerWidth > 950 });
     }
 
-    handleClick(e) {
+    flipCard(e) {
         if (!(e.target.tagName === "A" || e.target.tagName === "PATH" || e.target.tagName === "svg" || e.target.tagName === "polyline")) {
             e.preventDefault();
             this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
@@ -72,7 +72,7 @@ class Card extends React.Component {
         });
         return (
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection={this.state.isWide ? 'vertical' : 'horizontal'}>
-                <div className="uk-card uk-card-default uk-grid-collapse" uk-grid="" key="front" onClick={this.handleClick}>
+                <div className="uk-card uk-card-default uk-height-large uk-height-medium@m uk-grid-collapse" uk-grid="" key="front" onClick={this.flipCard}>
                     <div className="uk-card-media-left uk-cover-container uk-width-1-4@m">
                         <img src={dev.photoURL} alt="" uk-cover="" />
                         <canvas width="600" height="400"></canvas>
@@ -99,7 +99,7 @@ class Card extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="uk-card-body uk-visible-toggle uk-card uk-card-default uk-light uk-padding-remove" key="back" onClick={this.handleClick} tabIndex="-1" uk-slideshow="animation: slide">
+                <div className="uk-card uk-card-default uk-height-large uk-height-medium@m uk-visible-toggle uk-light uk-padding-remove" key="back" onClick={this.flipCard} tabIndex="-1" uk-slideshow="animation: slide">
                     <ul className="uk-slideshow-items">
                         {userProjects}
                     </ul>
