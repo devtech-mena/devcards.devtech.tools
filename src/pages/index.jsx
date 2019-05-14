@@ -66,6 +66,7 @@ export const query = graphql`
                 homeUrl
                 description
                 skills
+                repoUrl
                 profiles {
                     github {
                         profileLink
